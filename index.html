@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">BMI Calculator</h1>
+        <div class="buttonbox">
+            <button id="siButton" onclick="siFn()" value="1">SI Units</button>
+            <button id="usButton" onclick="usFn()" value="0">US Units</button>
+        </div>
+        <form action="">
+
+            <div class="inputbox">
+                <label for="height">Height :</label>
+                <div>
+                    <input step="any" type="number" id="height" step="any">
+                    <span id="heightUnit">cm</span>
+                </div>
+            </div>
+
+            <div class="inputbox">
+                <label for="weight">Weight :</label>
+                <div id="forUsWeightInput1">
+                    <input type="number" id="weight">
+                    <span id="weightsUnit1">kg</span>
+                </div>
+
+                <div id="forUsWeightInput2" style="display: none;">
+                    <input type="number" id="weight">
+                    <span id="weightsUnit2">lb</span>
+
+                </div>
+            </div>
+
+
+            <div class="buttonbox">
+                <button onclick="calculateFn(event)" type="submit">calculate</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+        <p>BMI: <span id="bmiresult"></span> <span id="bmistatus"></span></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

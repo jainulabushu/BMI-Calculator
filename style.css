@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    margin-top: 2%;
+}
+
+.buttonbox{
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.inputbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 4% 0;
+}
+.inputbox span{
+    position: absolute;
+    right: 8%;
+    color: rgba(0, 0, 0, 0.6);
+}

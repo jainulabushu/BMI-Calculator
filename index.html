@@ -9,24 +9,26 @@
 </head>
 
 <body>
-    <form class="container" action="">
+    <form class="container" id="container" action="">
 
         <h1 id="heading">BMI Calculator</h1>
 
-        <div class="buttonbox">
-            <button id="siButton" class="siBtnActive" onclick="siFn()" value="1" type="reset">SI Units</button>
-            <button id="usButton" onclick="usFn()" value="0" type="reset">US Units</button>
+        <div class="unitsBox buttonBox">
+            <label for="siButton" class="siUnitLab unitHoverLab">SI Units</label>
+            <input type="radio" onclick="siFn()" name="units" id="siButton" value="1">
+            <label for="usButton" class="usUnitLab unitHoverLab">US Units</label>
+            <input type="radio" onclick="usFn()" name="units" id="usButton" value="0">
         </div>
 
         <div class="inputbox" id="siInputBox">
             <label for="height">Height :</label>
-            <div >
+            <div>
                 <input step="any" type="number" id="height" step="any">
                 <span id="heightUnit">cm</span>
             </div>
         </div>
 
-        <div class="inputbox" id="usInputBox" style="display: none;" >
+        <div class="inputbox" id="usInputBox" style="display: none;">
             <label for="height1">Height :</label>
             <div class="usBox">
                 <input step="any" type="number" step="any" id="feetIn">
@@ -45,7 +47,7 @@
         </div>
 
 
-        <div class="buttonbox">
+        <div class="buttonBox">
             <button onclick="calculateFn(event)" type="submit">calculate</button>
             <button type="reset">Clear</button>
         </div>

@@ -21,13 +21,32 @@ body {
     justify-content: center;
 }
 
-.buttonbox {
+.unitsBox input {
+    display: none;
+}
+
+.buttonBox {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin: .5rem auto;
 }
 
+.unitsBox {
+    background-color: #221bff;
+    color: white;
+    padding: .4rem 0;
+    font-size: 1.1rem;
+
+}
+
+.unitsBox .usUnitLab {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.unitsBox .unitHoverLab:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
 
 .inputbox {
     display: flex;
@@ -41,8 +60,7 @@ body {
     position: relative;
 }
 
-
-.inputbox div input{
+.inputbox div input {
     width: 100%;
 }
 
@@ -57,17 +75,15 @@ body {
     margin: .5rem;
 }
 
-.inputbox .usBox{
+.inputbox .usBox {
     display: flex;
     justify-content: space-between;
 }
 
-
-.inputbox .usBox input{
+.inputbox .usBox input {
     width: 49%;
 }
 
-
-.inputbox .usBox #ftSpan{
+.inputbox .usBox #ftSpan {
     left: 5rem;
 }

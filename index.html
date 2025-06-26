@@ -9,45 +9,50 @@
 </head>
 
 <body>
-    <div class="container">
+    <form class="container" action="">
+
         <h1 id="heading">BMI Calculator</h1>
+
         <div class="buttonbox">
-            <button id="siButton" onclick="siFn()" value="1">SI Units</button>
-            <button id="usButton" onclick="usFn()" value="0">US Units</button>
+            <button id="siButton" class="siBtnActive" onclick="siFn()" value="1" type="reset">SI Units</button>
+            <button id="usButton" onclick="usFn()" value="0" type="reset">US Units</button>
         </div>
-        <form action="">
 
-            <div class="inputbox">
-                <label for="height">Height :</label>
-                <div>
-                    <input step="any" type="number" id="height" step="any">
-                    <span id="heightUnit">cm</span>
-                </div>
+        <div class="inputbox" id="siInputBox">
+            <label for="height">Height :</label>
+            <div >
+                <input step="any" type="number" id="height" step="any">
+                <span id="heightUnit">cm</span>
             </div>
+        </div>
 
-            <div class="inputbox">
-                <label for="weight">Weight :</label>
-                <div id="forUsWeightInput1">
-                    <input type="number" id="weight">
-                    <span id="weightsUnit1">kg</span>
-                </div>
-
-                <div id="forUsWeightInput2" style="display: none;">
-                    <input type="number" id="weight">
-                    <span id="weightsUnit2">lb</span>
-
-                </div>
+        <div class="inputbox" id="usInputBox" style="display: none;" >
+            <label for="height1">Height :</label>
+            <div class="usBox">
+                <input step="any" type="number" step="any" id="feetIn">
+                <span id="ftSpan">ft</span>
+                <input step="any" type="number" step="any" id="inchIn">
+                <span id="inSpan">in</span>
             </div>
+        </div>
 
-
-            <div class="buttonbox">
-                <button onclick="calculateFn(event)" type="submit">calculate</button>
-                <button type="reset">Clear</button>
+        <div class="inputbox">
+            <label for="weight">Weight :</label>
+            <div>
+                <input type="number" id="weight">
+                <span id="weightUnit">kg</span>
             </div>
-        </form>
+        </div>
+
+
+        <div class="buttonbox">
+            <button onclick="calculateFn(event)" type="submit">calculate</button>
+            <button type="reset">Clear</button>
+        </div>
+
         <p>BMI: <span id="bmiresult"></span> <span id="bmistatus"></span></p>
+    </form>
 
-    </div>
 
     <script src="script.js"></script>
 </body>

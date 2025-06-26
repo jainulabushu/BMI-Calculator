@@ -1,27 +1,34 @@
 const weightin = document.getElementById("weight");
 const heightin = document.getElementById("height");
+const feetIn = document.getElementById("feetIn");
+const inchIn = document.getElementById("inchIn");
 const bmivalue = document.getElementById("bmiresult");
 const bmiStatus = document.getElementById("bmistatus");
 const siButton = document.getElementById("siButton");
 const usButton = document.getElementById("usButton");
 const heightUnit = document.getElementById("heightUnit");
-const forUsWeightInput1 = document.getElementById("forUsWeightInput1");
-const forUsWeightInput2 = document.getElementById("forUsWeightInput2");
+const weightUnit = document.getElementById("weightUnit");
+const siInputBox = document.getElementById("siInputBox");
+const usInputBox = document.getElementById("usInputBox");
+
 
 function siFn() {
     siButton.value = 1;
     usButton.value = 0;
     heightUnit.innerHTML = 'cm';
-    forUsWeightInput1.style.display = 'block';
-    forUsWeightInput2.style.display = 'none';
+    weightUnit.innerHTML = 'kg';
+    siInputBox.style.display = 'flex';
+    usInputBox.style.display = 'none';
 }
 
 function usFn() {
     siButton.value = 0;
     usButton.value = 1;
     heightUnit.innerHTML = 'ft';
-    forUsWeightInput1.style.display = 'none';
-    forUsWeightInput2.style.display = 'block';
+    weightUnit.innerHTML = 'lb';
+    
+    siInputBox.style.display = 'none';
+    usInputBox.style.display = 'flex';
 }
 
 
@@ -36,7 +43,12 @@ function calculateFn(event) {
         
     }
     else{
-        bmi = (weightin.value*703)/(heightin.value*heightin.value)
+        let ftToInch = feetIn.value*12;
+        let totalInch = ftToInch + Number(inchIn.value);
+        
+        bmi = (weightin.value*703)/(totalInch*totalInch)
+        
+        console.log(bmi)
     }
 
     bmivalue.innerHTML = bmi.toFixed(2);

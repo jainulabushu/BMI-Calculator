@@ -15,3 +15,13 @@ BMI = weight / (height * height)
 
 weight in kg
 height in meters
+
+
+rem
+Font sizes, padding, margin — for consistent scaling.
+
+%
+Width, height inside containers — for flexible layouts.
+
+vh/vw
+Full-screen or viewport-based design.

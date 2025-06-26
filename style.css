@@ -1,29 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
 }
-.container{
-    margin-top: 2%;
+
+.container {
+    margin-top: 2rem;
+    width: 20rem;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.buttonbox{
-    margin: 5% auto;
+.buttonbox {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
+    margin: .5rem auto;
 }
-.inputbox{
+
+
+.inputbox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: .5rem auto;
+}
+
+.inputbox div {
+    width: 75%;
     position: relative;
+}
+
+
+.inputbox div input{
+    width: 100%;
+}
+
+.inputbox div span {
+    position: absolute;
+    left: 11.5rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.container p {
+    width: 85%;
+    margin: .5rem;
+}
+
+.inputbox .usBox{
     display: flex;
     justify-content: space-between;
-    margin: 4% 0;
 }
-.inputbox span{
-    position: absolute;
-    right: 8%;
-    color: rgba(0, 0, 0, 0.6);
+
+
+.inputbox .usBox input{
+    width: 49%;
+}
+
+
+.inputbox .usBox #ftSpan{
+    left: 5rem;
 }

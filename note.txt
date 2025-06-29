@@ -25,3 +25,8 @@ Width, height inside containers — for flexible layouts.
 
 vh/vw
 Full-screen or viewport-based design.
+
+git status
+git add .
+git commit -m 'message'
+git push

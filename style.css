@@ -40,11 +40,15 @@ body {
 
 }
 
-.unitsBox .usUnitLab {
+.unitsBox .selectedLabel {
+    color: white;
+}
+
+.unitsBox .notSelectedLabel {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.unitsBox .unitHoverLab:hover {
+.unitsBox .notSelectedLabel:hover {
     color: rgba(255, 255, 255, 0.8);
 }
 

@@ -11,6 +11,8 @@ const heightUnit = document.getElementById("heightUnit");
 const weightUnit = document.getElementById("weightUnit");
 const siInputBox = document.getElementById("siInputBox");
 const usInputBox = document.getElementById("usInputBox");
+const siUnitLab = document.querySelector('.siUnitLab');
+const usUnitLab = document.querySelector('.usUnitLab');
 
 
 function siFn() {
@@ -21,6 +23,11 @@ function siFn() {
     siInputBox.style.display = 'flex';
     usInputBox.style.display = 'none';
     container.reset();
+
+    siUnitLab.classList.add('slectedLabel');
+    siUnitLab.classList.remove('notSelectedLabel');
+    usUnitLab.classList.add('notSelectedLabel');
+    usUnitLab.classList.remove('slectedLabel');
 }
 
 function usFn() {
@@ -31,6 +38,11 @@ function usFn() {
     siInputBox.style.display = 'none';
     usInputBox.style.display = 'flex';
     container.reset();
+
+    usUnitLab.classList.add('slectedLabel');
+    usUnitLab.classList.remove('notSelectedLabel');
+    siUnitLab.classList.add('notSelectedLabel');
+    siUnitLab.classList.remove('slectedLabel');
 }
 
 
